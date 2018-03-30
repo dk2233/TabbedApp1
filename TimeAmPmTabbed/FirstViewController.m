@@ -38,8 +38,12 @@
     //NSLog(@"%f",[self.timeSlider value]);
     
     [self.textTime setText:[NSString stringWithFormat:@"%f",[self.timeSlider value]]];
+    [self.delegate updateTextFromFirstToSecond:[self.textTime text]];
     
+    float b =  [self.timeSlider value] *4;
+    [self.textCalc setText:[NSString stringWithFormat:@"%f",b]];
 }
+
 
 
 
