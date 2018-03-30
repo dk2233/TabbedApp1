@@ -33,8 +33,6 @@
 }
 
 
-
-
 - (IBAction)timeSliderChanged:(id)sender {
     
     //NSLog(@"%f",[self.timeSlider value]);
@@ -42,16 +40,9 @@
     [self.textTime setText:[NSString stringWithFormat:@"%f",[self.timeSlider value]]];
     
 }
-- (IBAction)textTouchedDown:(id)sender {
-    NSLog(@"touched ");
-    [sender  setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
-    //first
-}
 
 
-- (IBAction)textChanged:(UITextField *)sender {
-    //NSLog(@" changed %@",sender);
-}
+
 
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
@@ -77,14 +68,13 @@
 //and this is a method of UITetxFieldDelegate
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
     
-    
     [textField resignFirstResponder];
     NSLog(@"self:  %@ ", self);
     [self.delegate updateTextFromFirstToSecond:[self.textTime text]];
     
-
     return YES;
 }
+
 
 -(void)viewWillAppear:(BOOL)animated{
     NSLog(@"%@", self);

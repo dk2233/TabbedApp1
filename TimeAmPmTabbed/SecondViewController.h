@@ -9,12 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "FirstViewController.h"
 
-@interface SecondViewController : UIViewController <UITextFieldDelegate, SecondDelegate, UITabBarDelegate>  {
-    
-    FirstViewController *firstView;
-}
+@interface SecondViewController : UIViewController <UITextFieldDelegate, SecondDelegate, UITabBarDelegate> 
 
 @property (weak, nonatomic) IBOutlet UITextField *textOn2View;
-
+@property (weak, nonatomic) FirstViewController *mainView;
 @end
 

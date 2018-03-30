@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "FirstViewController.h"
 #import "SecondViewController.h"
 
 UITabBarController *bar;
@@ -22,11 +21,6 @@ UITabBarController *bar;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
-//    FirstViewController *firstView = [[FirstViewController alloc] init];
-//    SecondViewController *secondView = [[SecondViewController alloc] init];
-    
-    
     bar = (UITabBarController *)self.window.rootViewController;
     
     NSLog(@"bar %@",bar);
@@ -35,6 +29,10 @@ UITabBarController *bar;
     {
         NSLog(@" %@ ",inst);
     }
+    
+    //here from ArrAY that have all viewControllers in tab
+    // i take first to be used as delegate
+    [[[bar viewControllers] objectAtIndex:1U] setValue:[[bar viewControllers] objectAtIndex:0U]  forKey:@"mainView" ];
     
     return YES;
 }

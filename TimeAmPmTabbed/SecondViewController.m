@@ -15,23 +15,24 @@
 
 @implementation SecondViewController
 
+-(id)init{
+    
+    
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    
+        
     [self.textOn2View setDelegate:self];
     [self.textOn2View setText:@" start "];
     
-    
-    [[ [bar viewControllers] objectAtIndex:0U] setDelegate:self];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC*3), dispatch_get_main_queue(), ^(void){
-        
-        [firstView.textCalc setText:@"bbb"];
-        NSLog(@" tututu ");
-    });
-    
+    //NSLog(@" %@ == %@ ",[[bar viewControllers] objectAtIndex:0U],_mainView);
+    //[[ [bar viewControllers] objectAtIndex:0U] setDelegate:self];
+   
+    [_mainView setDelegate:self];
 }
 
 

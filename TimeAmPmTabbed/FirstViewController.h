@@ -15,7 +15,7 @@
 
 @end
 
-@interface FirstViewController : UIViewController <UITextFieldDelegate, UITabBarDelegate>
+@interface FirstViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textTime;
 @property (weak, nonatomic) IBOutlet UISlider *timeSlider;
