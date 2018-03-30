@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "FirstViewController.h"
+#import "SecondViewController.h"
+
+UITabBarController *bar;
 
 @interface AppDelegate ()
 
@@ -17,11 +21,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+//    FirstViewController *firstView = [[FirstViewController alloc] init];
+//    SecondViewController *secondView = [[SecondViewController alloc] init];
+    
+    
+    bar = (UITabBarController *)self.window.rootViewController;
+    
+    NSLog(@"bar %@",bar);
+    
+    for ( UIViewController *inst in  [bar viewControllers])
+    {
+        NSLog(@" %@ ",inst);
+    }
+    
     return YES;
 }
-- (IBAction)finishEdit:(UITextField *)sender {
-    NSLog(@" finish ");
-}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

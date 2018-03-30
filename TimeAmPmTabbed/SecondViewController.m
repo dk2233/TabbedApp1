@@ -7,28 +7,24 @@
 //
 
 #import "SecondViewController.h"
+#import "AppDelegate.h"
 
-FirstViewController *firstView;
-//
-//@interface SecondViewController ()
-//
-//@end
+@interface SecondViewController ()
+
+@end
 
 @implementation SecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    //[]
-    
-     firstView = [[FirstViewController alloc] init];
     
     
     [self.textOn2View setDelegate:self];
     [self.textOn2View setText:@" start "];
     
-    [firstView setDelegate:self];
-
+    
+    [[ [bar viewControllers] objectAtIndex:0U] setDelegate:self];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC*3), dispatch_get_main_queue(), ^(void){
         
@@ -58,7 +54,10 @@ FirstViewController *firstView;
 -(void)viewWillAppear:(BOOL)animated
 {
     NSLog(@" ponownie ");
-    NSLog(@"%@", firstView);
+    NSLog(@"%@", self);
+    //NSLog(@"super: %@",[super childViewControllers] );
 }
+
+
 
 @end

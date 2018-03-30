@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "SecondViewController.h"
-
 
 //protocol has to be in view that sends sthg
 @protocol SecondDelegate <NSObject>
@@ -17,7 +15,7 @@
 
 @end
 
-@interface FirstViewController : UIViewController <UITextFieldDelegate>
+@interface FirstViewController : UIViewController <UITextFieldDelegate, UITabBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textTime;
 @property (weak, nonatomic) IBOutlet UISlider *timeSlider;
