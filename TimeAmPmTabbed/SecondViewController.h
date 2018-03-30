@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FirstViewController.h"
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController <UITextFieldDelegate, SecondDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *textOn2View;
 
 @end
 

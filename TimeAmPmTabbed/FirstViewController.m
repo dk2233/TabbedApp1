@@ -7,10 +7,10 @@
 //
 
 #import "FirstViewController.h"
-
-@interface FirstViewController ()
-
-@end
+//
+//@interface FirstViewController ()
+////SecondView
+//@end
 
 @implementation FirstViewController
 
@@ -18,10 +18,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //;_textTime.delegate
+    //SecondViewController *secondView = [[SecondViewController alloc] init];
     
+    
+    // textTime is delegating to himself
     [_textTime setDelegate:self];
-    
+    [self.textTime setText:@"textTime"];
+    //[self setDelegate:secondView];
+
 }
 
 
@@ -31,8 +35,8 @@
 }
 - (IBAction)textWasGiven:(id)sender {
     
-    NSLog(@"juz");
-    NSLog(@"%@",[NSString stringWithFormat:@"%@", [self.textTime text]]);
+    //NSLog(@"juz");
+    //NSLog(@"%@",[NSString stringWithFormat:@"%@", [self.textTime text]]);
     
 }
 - (IBAction)timeSliderChanged:(id)sender {
@@ -50,7 +54,7 @@
 
 
 - (IBAction)textChanged:(UITextField *)sender {
-    NSLog(@" changed %@",sender);
+    //NSLog(@" changed %@",sender);
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
@@ -80,12 +84,20 @@
 //    }
 }
 
-
+//and this is a method of UITetxFieldDelegate
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
     
     //[textField setKeyboardType:UIKeyboardTypeNumberPad];
     [textField resignFirstResponder];
+    NSLog(@"self:  %@ ", self);
+    [self.delegate updateTextFromFirstToSecond:[self.textTime text]];
+    
+
     return YES;
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"%@", self);
 }
 
 

@@ -8,15 +8,34 @@
 
 #import "SecondViewController.h"
 
-@interface SecondViewController ()
-
-@end
+FirstViewController *firstView;
+//
+//@interface SecondViewController ()
+//
+//@end
 
 @implementation SecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //[]
+    
+     firstView = [[FirstViewController alloc] init];
+    
+    
+    [self.textOn2View setDelegate:self];
+    [self.textOn2View setText:@" start "];
+    
+    [firstView setDelegate:self];
+
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC*3), dispatch_get_main_queue(), ^(void){
+        
+        [firstView.textCalc setText:@"bbb"];
+        NSLog(@" tututu ");
+    });
+    
 }
 
 
@@ -25,5 +44,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)updateTextFromFirstToSecond:(NSString *)textFromInput {
+    NSLog(@"@ run delegate %@ ",textFromInput);
+    [self.textOn2View setText:textFromInput];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@" ponownie ");
+    NSLog(@"%@", firstView);
+}
 
 @end
