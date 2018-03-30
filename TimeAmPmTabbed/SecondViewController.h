@@ -13,5 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textOn2View;
 @property (weak, nonatomic) FirstViewController *mainView;
+@property (weak,nonatomic) NSString *initialText;
+-(id)init;
+
+
 @end
 

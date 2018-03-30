@@ -31,26 +31,15 @@ UITabBarController *bar;
     }
     
     
-    SecondViewController *secondView = [[SecondViewController alloc] init];
-    //i overwrite interface that i have in array of tab
-    
-    NSArray *tab_view = [NSArray arrayWithObject:[[bar viewControllers] objectAtIndex:0U]];
-    
-    bar.viewControllers = [tab_view arrayByAddingObject:secondView];
-    
-    
-    NSLog(@"2st : bar %@",bar);
-    
-    for ( UIViewController *inst in  [bar viewControllers])
-    {
-        NSLog(@" %@ ",inst);
-    }
-    
     
     
     //here from ArrAY that have all viewControllers in tab
     // i take first to be used as delegate
     [[[bar viewControllers] objectAtIndex:1U] setValue:[[bar viewControllers] objectAtIndex:0U]  forKey:@"mainView" ];
+    
+    
+    [[[bar viewControllers] objectAtIndex:1U] viewDidLoad];
+    
     
     return YES;
 }

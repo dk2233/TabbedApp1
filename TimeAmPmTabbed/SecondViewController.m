@@ -17,8 +17,6 @@
 
 -(id)init{
     
-    
-    
     return self;
 }
 
@@ -26,13 +24,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
         
-    [self.textOn2View setDelegate:self];
-    [self.textOn2View setText:@" start "];
+    
+    [self.textOn2View setText:_initialText];
     
     //NSLog(@" %@ == %@ ",[[bar viewControllers] objectAtIndex:0U],_mainView);
     //[[ [bar viewControllers] objectAtIndex:0U] setDelegate:self];
-   
+    [self.textOn2View setDelegate:self];
     [_mainView setDelegate:self];
+    
 }
 
 
@@ -43,8 +42,11 @@
 
 
 - (void)updateTextFromFirstToSecond:(NSString *)textFromInput {
+    _initialText = textFromInput;
     NSLog(@"@ run delegate %@ ",textFromInput);
     [self.textOn2View setText:textFromInput];
+    
+    NSLog(@" new: %@",[self.textOn2View text]);
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -58,7 +60,6 @@
     NSLog(@"%@", self);
     //NSLog(@"super: %@",[super childViewControllers] );
 }
-
 
 
 @end
