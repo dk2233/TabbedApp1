@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     
-    // textTime is delegating to himself
+    // textTime is delegating to this class
     [_textTime setDelegate:self];
     [self.textTime setText:@"textTime"];
     

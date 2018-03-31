@@ -35,7 +35,7 @@ UITabBarController *bar;
     
     //here from ArrAY that have all viewControllers in tab
     // i take first to be used as delegate
-    [[[bar viewControllers] objectAtIndex:1U] setValue:[[bar viewControllers] objectAtIndex:0U]  forKey:@"mainView" ];
+    [[[bar viewControllers] objectAtIndex:0U] setValue:[[bar viewControllers] objectAtIndex:1U]  forKey:@"delegate" ];
     
     
     [[[bar viewControllers] objectAtIndex:1U] viewDidLoad];

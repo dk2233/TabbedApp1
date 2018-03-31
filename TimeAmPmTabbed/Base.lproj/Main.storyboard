@@ -115,7 +115,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Menu" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="second" selectedImage="second" id="cPa-gy-q4n">
+                        <color key="badgeColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="SecondLabel" destination="zEq-FU-wV5" id="TqL-cK-Fyg"/>
                         <outlet property="SecondSwitch" destination="YIc-Nf-ks8" id="SDm-S2-Dka"/>

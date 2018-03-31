@@ -17,10 +17,6 @@
 
 @implementation SecondViewController
 
--(id)init{
-    
-    return self;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,7 +28,7 @@
     //NSLog(@" %@ == %@ ",[[bar viewControllers] objectAtIndex:0U],_mainView);
     //[[ [bar viewControllers] objectAtIndex:0U] setDelegate:self];
     [self.textOn2View setDelegate:self];
-    [_mainView setDelegate:self];
+    
     
 }
 
