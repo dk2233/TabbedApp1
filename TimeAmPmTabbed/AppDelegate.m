@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SecondViewController.h"
+#import "ViewControllers.h"
 
 UITabBarController *bar;
 
@@ -40,6 +40,8 @@ UITabBarController *bar;
     
     [[[bar viewControllers] objectAtIndex:1U] viewDidLoad];
     
+    //I set here SecondView ass a delegate for First One
+    [[[bar viewControllers] objectAtIndex:1U] setValue:[[bar viewControllers] objectAtIndex:0U]  forKey:@"delegate" ];
     
     return YES;
 }

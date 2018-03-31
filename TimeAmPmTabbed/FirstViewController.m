@@ -6,7 +6,8 @@
 //  Copyright © 2018 code masterss. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "ViewControllers.h"
+#import "AppDelegate.h"
 //
 @interface FirstViewController ()
 
@@ -82,6 +83,18 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     NSLog(@"%@", self);
+}
+
+-(void)getInfoFromSwitch:(SwitchState_t)state
+{
+    if (state==SWITCH_OFF){
+        [_textTime setText:@" OFF"];
+        [_textCalc setBackgroundColor:[UIColor colorWithRed:1.0 green:0.4 blue:0.2 alpha:1.0]];
+    }
+    else
+    {
+        [_textCalc setBackgroundColor:[UIColor colorWithRed:0.3 green:0.8 blue:0.2 alpha:1.0]];
+    }
 }
 
 @end

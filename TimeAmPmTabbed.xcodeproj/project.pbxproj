@@ -21,9 +21,7 @@
 		E7218CA8206C369C00F30419 /* TimeAmPmTabbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeAmPmTabbed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7218CAB206C369C00F30419 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7218CAC206C369C00F30419 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E7218CAE206C369C00F30419 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		E7218CAF206C369C00F30419 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		E7218CB1206C369C00F30419 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E7218CB2206C369C00F30419 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E7218CB5206C369C00F30419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7218CB7206C369C00F30419 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,6 +29,7 @@
 		E7218CBC206C369C00F30419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7218CBD206C369C00F30419 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7218CC5206C37DA00F30419 /* OK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OK.png; sourceTree = "<group>"; };
+		E7218CC7206FA1CC00F30419 /* ViewControllers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +65,8 @@
 			children = (
 				E7218CAB206C369C00F30419 /* AppDelegate.h */,
 				E7218CAC206C369C00F30419 /* AppDelegate.m */,
-				E7218CAE206C369C00F30419 /* FirstViewController.h */,
 				E7218CAF206C369C00F30419 /* FirstViewController.m */,
-				E7218CB1206C369C00F30419 /* SecondViewController.h */,
+				E7218CC7206FA1CC00F30419 /* ViewControllers.h */,
 				E7218CB2206C369C00F30419 /* SecondViewController.m */,
 				E7218CB4206C369C00F30419 /* Main.storyboard */,
 				E7218CB7206C369C00F30419 /* Assets.xcassets */,

@@ -6,7 +6,7 @@
 //  Copyright © 2018 code masterss. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "ViewControllers.h"
 #import "AppDelegate.h"
 
 #define CHANGED_LABEL @" other "
@@ -64,15 +64,21 @@
 }
 - (IBAction)SecondViewSwitchAcition:(id)sender {
     static NSString *textOriginal;
+    
+    SwitchState_t state = SWITCH_OFF;
     if ( ![_SecondLabel.text isEqualToString: CHANGED_LABEL] )
     {
         textOriginal = _SecondLabel.text;
         [_SecondLabel setText:@" other "];
+        state = SWITCH_ON;
+        
     }
     else
     {
         [_SecondLabel setText:textOriginal];
+        state = SWITCH_OFF;
     }
+    [self.delegate getInfoFromSwitch:state];
     
 }
 
