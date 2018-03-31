@@ -20,6 +20,8 @@ typedef enum{
 
 //protocol has to be in view that sends sthg
 @protocol SecondDelegate <NSObject>
+
+@optional
 -(void)updateTextFromFirstToSecond:(NSString *)textFromInput;
 -(void)getInfoFromSwitch:(SwitchState_t )state;
 @end
