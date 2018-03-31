@@ -9,6 +9,8 @@
 #import "SecondViewController.h"
 #import "AppDelegate.h"
 
+#define CHANGED_LABEL @" other "
+
 @interface SecondViewController ()
 
 @end
@@ -59,6 +61,19 @@
     NSLog(@" ponownie ");
     NSLog(@"%@", self);
     //NSLog(@"super: %@",[super childViewControllers] );
+}
+- (IBAction)SecondViewSwitchAcition:(id)sender {
+    static NSString *textOriginal;
+    if ( ![_SecondLabel.text isEqualToString: CHANGED_LABEL] )
+    {
+        textOriginal = _SecondLabel.text;
+        [_SecondLabel setText:@" other "];
+    }
+    else
+    {
+        [_SecondLabel setText:textOriginal];
+    }
+    
 }
 
 
