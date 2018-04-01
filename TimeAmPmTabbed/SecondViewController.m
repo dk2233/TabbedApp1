@@ -9,7 +9,7 @@
 #import "ViewControllers.h"
 #import "AppDelegate.h"
 
-#define CHANGED_LABEL @" other "
+#define CHANGED_LABEL @"You pressed"
 
 @interface SecondViewController ()
 
@@ -29,6 +29,7 @@
     //[[ [bar viewControllers] objectAtIndex:0U] setDelegate:self];
     [self.textOn2View setDelegate:self];
     
+    //[_TableView];
     
 }
 
@@ -65,7 +66,7 @@
     if ( ![_SecondLabel.text isEqualToString: CHANGED_LABEL] )
     {
         textOriginal = _SecondLabel.text;
-        [_SecondLabel setText:@" other "];
+        [_SecondLabel setText:CHANGED_LABEL];
         state = SWITCH_ON;
         
     }
