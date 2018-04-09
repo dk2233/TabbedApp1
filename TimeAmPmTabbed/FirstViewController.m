@@ -8,6 +8,7 @@
 
 #import "ViewControllers.h"
 #import "AppDelegate.h"
+#import <math.h>
 //
 @interface FirstViewController ()
 
@@ -43,6 +44,8 @@
     
     float b =  [self.timeSlider value] *4;
     [self.textCalc setText:[NSString stringWithFormat:@"%f",b]];
+    
+    [self.textMod setText:[NSString stringWithFormat:@"%f",fmod(b, 2.0)]];
 }
 
 

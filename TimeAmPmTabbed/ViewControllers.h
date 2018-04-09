@@ -36,6 +36,7 @@ typedef enum{
 @property (weak, nonatomic) IBOutlet UITextField *textCalc;
 @property (weak, nonatomic) id<SecondDelegate>delegate;
 
+@property (weak, nonatomic) IBOutlet UITextField *textMod;
 
 @end
 
